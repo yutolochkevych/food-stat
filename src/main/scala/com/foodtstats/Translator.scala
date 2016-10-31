@@ -93,7 +93,7 @@ trait BaseTranslator {
   }
 
   def waitForTimeOut(futList: Future[List[TranslateAnswerBody]], strategy: ResponseWaitStrategy): Boolean = {
-    Thread.sleep(20)
+    Thread.sleep(1000)
     if (!futList.isCompleted) {
       strategy match {
         case NonWaitStrategy => false
